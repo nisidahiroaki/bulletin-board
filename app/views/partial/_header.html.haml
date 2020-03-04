@@ -1,0 +1,20 @@
+.header__left
+  .header__title
+    = link_to '掲示板', root_path, class:"header__title-link"
+  .header__search
+    = form_for to_s do |f|
+      = f.search_field :title, placeholder:"キーワードを入力", class:'header__search-placeholder'
+      = f.button icon("fa", "search", class:"icon"), class:"header__search-btn"
+
+
+
+    -# = form_with model: , class: header__search-form:, local: true do |f|
+    -#   = f.text_field :search, placeholder:キーワードを入力, class:header__search-placeholder
+
+
+
+.header__right
+  = link_to 'ユーザー登録', '#', class: "header__right-current"
+  = link_to 'ログイン', '#', class: "header__right-login"
+    
+
