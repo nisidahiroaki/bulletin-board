@@ -1,2 +1,9 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.erb
+.content
+  .content__title
+    スレッド一覧
+- @posts.each do |post|
+  .post
+    .post__left
+      = post.title
+    .post__right
+      = post.created_at
