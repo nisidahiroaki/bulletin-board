@@ -1,0 +1,7 @@
+.showpost
+  .showpost_title
+    =@post.title
+  .showpost_day
+    =@post.created_at
+  .showpost_text
+    = simple_format @post.content

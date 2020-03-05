@@ -10,7 +10,7 @@
 - @posts.each do |post|
   %dl
     %dt.post_index_title
-      = post.title
+      = link_to post.title, post_path(post.id), class: "post_index_title-link"
     %dd.post_index_day
       = post.created_at
     %dd
