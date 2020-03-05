@@ -3,15 +3,15 @@
     スレッド一覧
 
 .posts
-  %dl
+  %dl.post_dl
     %dt.post__title タイトル
     %dd.post__day 投稿日
     %dd.post__name 投稿者
 - @posts.each do |post|
   %dl
-    %dt
+    %dt.post_index_title
       = post.title
-    %dd
+    %dd.post_index_day
       = post.created_at
     %dd
 

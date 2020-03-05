@@ -42,8 +42,12 @@
   line-height: 100px;
   height: 70px;
   display: inline-block;
-
 }
+input[type="search"]{
+  height: 50px;
+}
+
+
 
 .header__right{
   width: 20%;

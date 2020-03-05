@@ -1,3 +1,23 @@
 .content
   .content__title
     新規のスレッドを立てる
+
+.newpost
+  = form_with model: @post, class: :form, local: true do |f|
+    %dl
+      %dt.newpost_title
+        タイトル
+      %dd.newpost_placeholder
+        = f.text_field :title, placeholder: :タイトル, class: :form_title
+    %dl
+      %dt.newpost_content
+        本文
+      %dd.newpost_placeholder
+        = f.text_area :content, placeholder: :本文, class: :form_text
+    %dl
+      = f.submit '投稿する', id: :form_btn
+
+
+
+
+
