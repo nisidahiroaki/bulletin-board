@@ -1,9 +1,32 @@
 .content
   .content__title
     スレッド一覧
+
+.posts
+  %dl
+    %dt.post__title タイトル
+    %dd.post__day 投稿日
+    %dd.post__name 投稿者
 - @posts.each do |post|
-  .post
-    .post__left
+  %dl
+    %dt
       = post.title
-    .post__right
+    %dd
       = post.created_at
+    %dd
+
+
+
+
+
+
+
+
+
+
+      -# - @posts.each do |post|
+-#   .post
+-#     .post__left
+-#       = post.title
+-#     .post__right
+-#       = post.created_at
