@@ -5,8 +5,33 @@
   text-align: center;
 }
 
+.showpost_edit-link{
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color:#55c500;
+  padding: 0 10px;
+  text-decoration: none;
+  width: 100px;
+}
+
+.showpost_destroy-link{
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color:#55c500;
+  padding: 0 10px;
+  text-decoration: none;
+  width: 100px;
+}
+
 .showpost_day{
   margin-left: 10px;
+  margin-top: 50px;
   color: gray
 }
 

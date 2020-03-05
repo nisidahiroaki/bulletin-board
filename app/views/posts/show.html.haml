@@ -1,6 +1,10 @@
 .showpost
   .showpost_title
     =@post.title
+  .showpost_edit
+    = link_to "編集", edit_post_path(@post.id), class:"showpost_edit-link"
+  .showpost_destroy
+    = link_to "削除", post_path(@post.id), method: :delete, class:"showpost_destroy-link"
   .showpost_day
     =@post.created_at
   .showpost_text

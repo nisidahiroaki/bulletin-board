@@ -1,0 +1,23 @@
+.content
+  .content__title
+    スレッドを編集する
+
+.editpost
+  = form_with model: @post, class: :form, local: true do |f|
+    %dl
+      %dt.editpost_title
+        タイトル
+      %dd.editpost_placeholder
+        = f.text_field :title, placeholder: :タイトル, class: :form_title
+    %dl
+      %dt.editpost_content
+        本文
+      %dd.editpost_placeholder
+        = f.text_area :content, placeholder: :本文, class: :form_text
+    %dl
+      = f.submit '投稿する', id: :form_btn
+
+
+
+
+
