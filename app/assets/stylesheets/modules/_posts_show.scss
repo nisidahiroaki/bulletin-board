@@ -29,13 +29,21 @@
   width: 100px;
 }
 
-.showpost_day{
-  margin-left: 10px;
+
+.showpost__name{
+  font-weight: bold;
   margin-top: 50px;
-  color: gray
+  margin-left: 10px;
+  display: flex;
+
+}
+.showpost_day{
+  margin-left: 20px;
+  margin-top: 5px;
+  color: gray;
 }
 
 .showpost_text{
-  margin-left: 20px;
+  margin-left: 30px;
 
 }

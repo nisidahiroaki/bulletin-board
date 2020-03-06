@@ -13,7 +13,8 @@
       = link_to post.title, post_path(post.id), class: "post_index_title-link"
     %dd.post_index_day
       = post.created_at
-    %dd
+    %dd.post_index_name
+      = post.user.nickname
 
 
 
