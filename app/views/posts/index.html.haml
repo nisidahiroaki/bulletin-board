@@ -16,6 +16,7 @@
     %dd.post_index_name
       = post.user.nickname
 
+= paginate(@posts)
 
 
 
@@ -24,10 +25,3 @@
 
 
 
-
-      -# - @posts.each do |post|
--#   .post
--#     .post__left
--#       = post.title
--#     .post__right
--#       = post.created_at
