@@ -14,7 +14,12 @@
 
 
 .header__right
-  = link_to 'ユーザー登録', '#', class: "header__right-current"
-  = link_to '新規投稿', new_post_path, class: "header__right-login"
+  - if user_signed_in?
+    = link_to '新規投稿', new_post_path, class: "header__right__link-left"
+    = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header__right__link-right"
+  - else
+    = link_to 'ユーザー登録', new_user_registration_path, class: "header__right__link-left"
+    = link_to 'ログイン', new_user_session_path, class: "header__right__link-right"
+    
     
 
