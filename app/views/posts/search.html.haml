@@ -1,0 +1,9 @@
+.content
+  .content__title
+    スレッド一覧
+
+%ul
+-@posts.each do |post|
+  %li
+    = link_to post.title, post
+    = post.created_at

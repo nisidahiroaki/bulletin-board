@@ -5,4 +5,13 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :post_categories
   has_many :categories, through: :post_categories
+
+
+  def self.search(search)
+    return Post.all unless search
+    Post.where(['title LIKE ? OR content LIKE ?', "%#{search}%","%#{search}%"])
+  end
+
+
+
 end

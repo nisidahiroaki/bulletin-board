@@ -2,14 +2,15 @@
   .header__title
     = link_to '掲示板', root_path, class:"header__title-link"
   .header__search
-    = form_for to_s do |f|
-      = f.search_field :title, placeholder:"キーワードを入力", class:'header__search-placeholder'
-      = f.button icon("fa", "search", class:"icon"), class:"header__search-btn"
+    = form_tag(search_posts_path, method: :get) do
+      = text_field_tag :search
+      = submit_tag '検索', name: :nil
 
 
 
-    -# = form_with model: , class: header__search-form:, local: true do |f|
-    -#   = f.text_field :search, placeholder:キーワードを入力, class:header__search-placeholder
+    -# = form_for to_s do |f|
+    -#   = f.search_field :title, placeholder:"キーワードを入力", class:'header__search-placeholder'
+    -#   = f.button icon("fa", "search", class:"icon"), class:"header__search-btn"
 
 
 
@@ -20,6 +21,6 @@
   - else
     = link_to 'ユーザー登録', new_user_registration_path, class: "header__right__link-left"
     = link_to 'ログイン', new_user_session_path, class: "header__right__link-right"
-    
+
     
 
