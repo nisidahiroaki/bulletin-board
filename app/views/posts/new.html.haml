@@ -15,6 +15,15 @@
       %dd.newpost_placeholder
         = f.text_area :content, placeholder: :本文, class: :form_text
     %dl
+      %dt.newpost_category
+        カテゴリー
+      %dd.newpost_check
+        = f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category|
+          = category.label do
+            = category.check_box
+            = category.text
+
+    %dl
       = f.submit '投稿する', id: :form_btn
 
 
