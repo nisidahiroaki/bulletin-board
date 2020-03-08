@@ -13,10 +13,20 @@
   .showpost_text
     = simple_format @post.content
 
+  .comments
+    - if @comments
+      - @comments.each do |comment|
+        %p
+        %strong
+          = link_to comment.user.nickname, "/users/#{comment.user_id}"
+          ：
+        = comment.text
+
   .container
   - if current_user
     = form_with(model: [@post, @comment], local: true) do |f|
-      = f.text_area :text, placeholder: "コメントする"
-      = f.submit "SEND"
+      = f.text_area :text, placeholder: "コメントする", id: "container-placeholder"
+      = f.submit "投稿する", id: "container-submit"
   - else
-    %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    %strong 
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
